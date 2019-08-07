@@ -1,0 +1,14 @@
+<launch>
+
+    <node name="turtlebot3_aruco_control_node" pkg="turtlebot3_aruco_control" type="turtlebot3_aruco_control_node" output="screen">
+        <!--param name="frame" value="$(arg frame)"/>
+        <param name="worldFrame" value="$(arg worldFrame)"/>
+        <rosparam command="load" file="$(find tb3_navigation)/config/utils.yaml"/-->
+
+        <remap from="turtlebot3_aruco_control_node/cmd_vel" to="cmd_vel"/>
+        <remap from="turtlebot3_aruco_control_node/aruco_poses" to="aruco_poses"/>
+
+    </node>
+
+
+</launch>
